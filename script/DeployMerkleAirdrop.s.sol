@@ -7,15 +7,14 @@ import {MerkleAirdrop} from "../src/MerkleAirdrop.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract DeployMerkleAirdrop is Script {
-
     uint256 private AMOUNT_TO_TRANSFER = 100 * 1e18;
     bytes32 private s_root = 0xc5012f24f659953d0f1388ee980d1e5a518453a21b12a6db2e71feef1286de3c;
 
-    function run() public returns(MerkleAirdrop,DropToken) {
+    function run() public returns (MerkleAirdrop, DropToken) {
         return deployMerkleAirdrop();
     }
 
-    function deployMerkleAirdrop() public returns (MerkleAirdrop,DropToken){
+    function deployMerkleAirdrop() public returns (MerkleAirdrop, DropToken) {
         vm.startBroadcast();
 
         DropToken token = new DropToken();
@@ -26,5 +25,4 @@ contract DeployMerkleAirdrop is Script {
 
         return (airdrop, token);
     }
-
 }
