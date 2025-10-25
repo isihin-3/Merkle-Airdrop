@@ -11,8 +11,8 @@ contract MerkleAirdropTest is Test, ZkSyncChainChecker {
     DropToken public token;
     MerkleAirdrop public airdrop;
 
-    bytes32 public ROOT = 0x362c44ea6902b8a81755b1e871908e6d9e6cec7c75ed2e9a28a56db3e4f9f945;
-    bytes32 proofOne = 0x49d16b139016f0e285acf0e6c7f1f4f77fd61e08a5dee8c763f78c0be3b798dc;
+    bytes32 public ROOT = 0xc5012f24f659953d0f1388ee980d1e5a518453a21b12a6db2e71feef1286de3c;
+    bytes32 proofOne = 0x0fd7c981d39bece61f7499702bf59b3114a90e66b51ba2c53abdf7b62986c00a;
     bytes32 proofTwo = 0xb772c21179029e79a95e8e7d8ad305b9a41e4f67c1f473543e82b50d09dde476;
 
     bytes32[] public proof = [proofOne, proofTwo];
